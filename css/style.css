@@ -1,7 +1,7 @@
 ﻿.body,
 .container {
     width: 1920px;
-    /*margin: 0 auto;*/
+        /*margin: 0 auto;*/
 }
 
 @font-face {
@@ -71,7 +71,7 @@
 .header-logo {
     display: flex;
     justify-content: space-between;
-    width: 181px;
+    /*width: 181px;*/
     align-items: center;
     text-decoration: none;
     margin: -3px 200px -1px 0;
@@ -102,7 +102,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 800px;
+    /*width: 800px;*/
     margin: -6px -9px 0 0;
 
 }
@@ -150,7 +150,7 @@
 .basket-navigation {
     background-color: transparent;
     border: none;
-    width: 30px;
+    /*width: 30px;*/
     height: 35px;
     margin: 0 0 0 42px;
     display: block;
@@ -161,7 +161,7 @@
 .navigation-search {
     /*background-color: transparent;*/
     border: none;
-    width: 31px;
+    /*width: 31px;*/
     height: 35px;
     margin: 10px 0 0 17px;
     display: block;
@@ -219,7 +219,7 @@
 }
 
 .text-header-description {
-    width: 589px;
+    /*width: 589px;*/
     height: 261px;
     margin: 3px 2px 0 0;
 }
@@ -263,7 +263,7 @@
     color: #ffffff;
     text-align: center;
     margin: -6px auto;
-    width: 570px;
+    max-width: 570px;
 
 
 }
@@ -1708,4 +1708,11 @@ color: #c7b299;
 border-left:1px solid #252525;
 padding: 0 0 0 10px;
 margin: 0 0 0 10px;
+}
+@media (max-width:576px) {
+   
+    .header-description {
+        display:none;
+    }
+   
 }
