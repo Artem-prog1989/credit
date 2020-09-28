@@ -58,10 +58,13 @@
 }
 
 .header {
-    background-image: url(../img/bg_photo_11949.jpg);
+    /*background-image: url(../img/bg_photo_11949.jpg);*/
     width: 100%;
     background-color: rgba(17, 17, 17, 0.7);
     min-height: 1024px;
+    position: relative;
+   
+    position: relative;
 }
 
 .header-logo-navigation {
@@ -69,7 +72,7 @@
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-
+    
 }
 
 .header-logo {
@@ -80,6 +83,7 @@
     text-decoration: none;
     margin: -3px 200px -1px 0;
     fill: #ffffff;
+     z-index: 2;
 }
 
 .header-logo:hover {
@@ -94,6 +98,7 @@
     letter-spacing: -0.04em;
     color: #ffffff;
     text-transform: capitalize;
+    z-index: 2;
 }
 
 .logo-txt:hover {
@@ -108,7 +113,7 @@
     align-items: center;
     /*width: 800px;*/
     margin: -6px -9px 0 0;
-
+    z-index: 2;
 }
 
 .menu-mobil,
@@ -127,6 +132,7 @@
     align-items: center;
     padding: 0;
     margin: 8px 0 0 0;
+    z-index: 2;
 
 }
 
@@ -323,7 +329,28 @@
     margin: 2px 12px -17px 0;
     transform: rotate(225deg);
 }
-
+.slider-img {
+    position: absolute;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    left:0;
+    top:0;
+    z-index: 0;
+}
+.first {
+    opacity: 1;
+    z-index: 0;
+    
+}
+.slider-img:target {
+    
+    opacity: 1;
+    
+}
+#slider-img-first:target~.header-description>.pagination>.pagination-item:nth-child(1) {
+    background-color: #B8C046;
+}
 .pagination {
     width: 113px;
     /*border:1px solid white;*/
@@ -1779,20 +1806,42 @@ background-color: ;*/
 
 
     .navigation-menu {
-        visibility: hidden;
+       visibility: hidden;
         flex-direction: column;
         justify-content: center;
         position: absolute;
-        top: 143px;
-        right: 8px;
+        top: 0;
+        left: 0;
+     height: 0%;
+       width: 0%;
+        border-radius:50%;             
+                    
+                    
+        z-index:2;
+        
+        transition: all 0.5s ease;
+        
 
     }
 
     .navigation-menu li {
-        width: 210px;
-        min-height: 35px;
         background-color: #555555;
-    }
+        width:100%;
+        min-height: 79px;
+        padding: 32px 0;
+    box-sizing: border-box;
+        z-index: -1;
+    text-align: center;
+    transition: 0.5s ease all;
+    visibility: hidden;
+         
+}
+    .navigation-link {
+    
+    visibility: hidden;
+    
+}
+    
 
     .basket-navigation,
     .navigation-search {
@@ -1801,63 +1850,90 @@ background-color: ;*/
 
     .menu-mobil {
         display: block;
-        width: 64px;
-        height: 9px;
+        width: 32px;
+        height: 4px;
         position: relative;
         border: none;
         outline: none;
         background-color: #ffffff;
-
+        transition: all 0.1s ease;
     }
 
     .menu-mobil:after {
         content: "";
-        width: 64px;
-        height: 9px;
+        width: 32px;
+        height: 4px;
         display: block;
         border: none;
         outline: none;
         background-color: #ffffff;
-        top: 13px;
+        top: 7px;
         left: 0;
         position: absolute;
+      transition: all 0.1s ease;
     }
 
     .menu-mobil:before {
         content: "";
-        width: 64px;
-        height: 9px;
+        width: 32px;
+        height: 4px;
         display: block;
         border: none;
         outline: none;
         background-color: #ffffff;
-        top: -13px;
+        top: -7px;
         left: 0;
         position: absolute;
+        transition: all 0.1s ease;
     }
 
     .menu-mobil-input:checked ~ .menu-mobil:after {
         display: none;
-
+     
     }
 
     .menu-mobil-input:checked ~ .menu-mobil:before {
         transform: rotate(97deg);
         top: 1px;
         left: 1px;
-
+        transition: all 0.5s ease;
+        width: 32px;
+        height: 4px;
+        content: "";
+        
     }
 
     .menu-mobil-input:checked ~ .menu-mobil {
         transform: rotate(-48deg);
-
+        
+        width: 32px;
+        height: 4px;
+        content: "";
     }
 
     .menu-mobil-input:checked ~ .navigation-menu {
         visibility: visible;
         z-index: 1;
+        width: 97%;
+        opacity: 0.9;
+        margin: 0 0;
+        
+        top:464px;
+        top:464px;
+        left:7px;
+}
+.menu-mobil-input:checked ~ .navigation-menu li {
+        visibility: visible;
+       
+     
 
-    }
+}
+  .menu-mobil-input:checked ~ .navigation-menu li a {
+        visibility:visible;
+       
+     
+
+}  
 
     .waxom {
         width: 100%;
