@@ -351,6 +351,18 @@
 #slider-img-first:target~.header-description>.pagination>.pagination-item:nth-child(1) {
     background-color: #B8C046;
 }
+#slider-img-second:target~.header-description>.pagination>.pagination-item:nth-child(2) {
+    background-color: #B8C046;
+}
+#slider-img-third:target~.header-description>.pagination>.pagination-item:nth-child(3) {
+    background-color: #B8C046;
+}
+#slider-img-fourth:target~.header-description>.pagination>.pagination-item:nth-child(4) {
+    background-color: #B8C046;
+}
+#slider-img-fifth:target~.header-description>.pagination>.pagination-item:nth-child(5) {
+    background-color: #B8C046;
+}
 .pagination {
     width: 113px;
     /*border:1px solid white;*/
